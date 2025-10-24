@@ -1,0 +1,50 @@
+Claro, te doy un **resumen actualizado** del contexto de tu proyecto, basado en lo que has venido desarrollando en Unity:
+
+---
+
+### 🎮 **Título provisional:** *Move It* (nombre de la carpeta del proyecto)
+
+### 🧭 **Concepto general**
+
+Tu juego es un **título top-down (vista desde arriba)** donde el **jugador puede moverse libremente por el mapa** y **interactuar con objetos del entorno**, principalmente **recoger y soltar ítems**.
+
+El enfoque actual está en **pulir la mecánica de agarre y colocación de objetos**, asegurando que la **posición visual (sorting layer)** funcione correctamente cuando el jugador pasa “por encima” o “por debajo” de los objetos.
+
+---
+
+### 🧍‍♂️ **Jugador**
+
+* Se controla con movimiento en 8 direcciones (usando `Rigidbody2D`).
+* Tiene un componente `PlayerCarry` que permite **recoger y soltar ítems**.
+* El sprite del jugador cambia su orden de renderizado según su posición en Y, para dar sensación de profundidad (el clásico efecto de “pasar por delante o detrás” de un objeto).
+
+---
+
+### 📦 **Ítems (objetos interactuables)**
+
+* Los objetos (`ItemPickup` o similar) pueden ser **levantados** y **puestos en el suelo**.
+* Cada ítem tiene un *sorting order* dinámico para integrarse visualmente en el entorno (el problema que estabas resolviendo con el ítem (2)).
+* El sistema ya **diferencia la posición relativa entre jugador e ítem**, pero estás ajustando el comportamiento cuando el jugador está por encima (para que no se oculte o desaparezca visualmente).
+
+---
+
+### 🧠 **Estado actual**
+
+* Los problemas de colisiones, selección y movimiento **ya están resueltos**.
+* Solo queda corregir el **orden de renderizado (z-index / sorting order)** cuando el jugador sostiene o interactúa con el ítem (especialmente hacia arriba).
+* El objetivo inmediato es que **todos los ítems se comporten igual de bien que el “item(1)”**, sin desaparecer visualmente.
+
+---
+
+### 🚀 **Objetivo general**
+
+Por ahora parece un **prototipo base de un juego de interacción y lógica física**, tipo puzzle o simulación ligera, donde el jugador:
+
+* Mueve objetos.
+* Posiblemente los usa para resolver tareas o completar espacios.
+* Se enfoca en precisión, colocación y fluidez visual.
+
+---
+
+¿Quieres que te ayude a escribir una breve **descripción de diseño de juego (GDD)** de una página para tener una guía clara de a dónde podría evolucionar *Move It* (por ejemplo: puzzle, gestión, sandbox, etc.)?
+Eso te serviría también para el README de GitHub.
