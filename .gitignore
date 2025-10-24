@@ -28,6 +28,7 @@ UserSettings/
 .vscode/
 .idea/
 *.VisualStudio/
+.vs/
 
 # Crashlytics
 crashlytics-build.properties
